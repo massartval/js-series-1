@@ -7,4 +7,22 @@
     console.log('Hello Woods programmer');
 
     // YOUR CODE HERE
+    let isSure = false;
+    let age;
+    let gender;
+    let town;
+    function ask() {
+        age = prompt(`What is your age? `);
+        gender = prompt(`What is your gender? `);
+        town = prompt(`Where do you live (town name)? `);
+        while (isSure === false) {
+            if (confirm(`Please confirm that you are ${age} years old, that you are a ${gender} and that you live in ${town}. If any of these entries are incorrect, please click cancel.`)) {
+                isSure = true;
+            } else {
+            ask();
+            }
+        }
+        alert(`Thank you for your input!`)
+    }        
+    ask();
 })();
