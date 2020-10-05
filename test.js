@@ -1,5 +1,3 @@
-let i = 1;
-
 for (i = 1; i <= 21; i++) {
 console.log(`Results for i = ${i}`)
 console.log(Math.sqrt(i))
