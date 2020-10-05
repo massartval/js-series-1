@@ -9,7 +9,7 @@
         // your code here
         /**
          * Returns the square numbers between 1 and 21 by comparing the square root of each number with the same square root truncated to an integer. 
-         * For exemple, the square root of 3 is 1.73(...), and the square root of 3 truncated is 1. They're different, 3 is therefore not a square number.
+         * For exemple, the square root of 3 is 1.73(...), and the truncated square root of 3 is 1. They're different, 3 is therefore not a square number.
          */
         let array = [];
         for (i = 1; i <= 21; i++) {
