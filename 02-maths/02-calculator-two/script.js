@@ -6,7 +6,21 @@
 
     const performOperation = operation => {
         // perform the operation
-    };
+        switch(operation) {
+            case 'addition' : 
+                alert(+document.getElementById("op-one").value + +document.getElementById("op-two").value);
+                break;  
+            case 'substraction' : 
+                alert(+document.getElementById("op-one").value - +document.getElementById("op-two").value);
+                break;
+            case 'multiplication' : 
+                alert(+document.getElementById("op-one").value * +document.getElementById("op-two").value);
+                break;
+            case 'division' : 
+                alert(+document.getElementById("op-one").value / +document.getElementById("op-two").value);
+                break;  
+        }
+    }
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
         $btn.addEventListener(
