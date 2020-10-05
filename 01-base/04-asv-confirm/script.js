@@ -17,7 +17,7 @@
         town = prompt(`Where do you live (town name)? `);
         while (isSure === false) {
             if (confirm(`Please confirm that you are ${age} years old, that you are a ${gender} and that you live in ${town}. If any of these entries are incorrect, please click cancel.`)) {
-                isSure = true;
+            isSure = true;
             } else {
             ask();
             }
