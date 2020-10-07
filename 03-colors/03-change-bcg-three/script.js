@@ -12,7 +12,7 @@
       // Loops 6 times to generate the 6 values of the hex code
       for (i = 1; i <= 6; i++) {
         // Gets a random value between "0" and "f" (0-16)
-        let randomHex = Math.round(hexValuesArray.length * Math.random());
+        let randomHex = Math.floor(hexValuesArray.length * Math.random());
         // Assigns the random hex value from the array to the variable "randomValue"
         let randomValue = hexValuesArray[randomHex];
         // Concatenates the random hex values
