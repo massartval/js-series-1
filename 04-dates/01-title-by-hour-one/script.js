@@ -9,7 +9,6 @@
    */ function getTime() {
     let date = new Date();
     let hour = date.getHours();
-    document.getElementById("target").innerHTML = hour;
     return hour;
   }
   /**
