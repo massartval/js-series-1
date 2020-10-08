@@ -4,9 +4,7 @@
   // your code here
   document.getElementById("run").addEventListener("click", function () {
     function changeBgColor() {
-      document.body.style.backgroundColor = document.getElementById(
-        "color"
-      ).value;
+      document.body.style.backgroundColor = document.getElementById("color").value;
     }
     changeBgColor();
   });
