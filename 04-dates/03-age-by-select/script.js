@@ -6,10 +6,10 @@
     /**
      * Returns the birth date in an array (yyyy, mm, dd)
      */ function getBirthDate() {
-      let birthDate = [];
-      birthDate.push(+document.getElementById("dob-year").value);
-      birthDate.push(+document.getElementById("dob-month").value);
-      birthDate.push(+document.getElementById("dob-day").value);
+      let year = +document.getElementById("dob-year").value;
+      let month = +document.getElementById("dob-month").value;
+      let day = +document.getElementById("dob-day").value;
+      let birthDate = [year, month, day];
       return birthDate;
     }
     console.log(`Your birth date is ${getBirthDate()}`);
@@ -18,13 +18,10 @@
      * Returns the date for today in an array (yyyy, mm, dd)
      */ function getToday() {
       today = new Date();
-      todayYear = today.getFullYear();
-      todayMonth = today.getMonth();
-      todayDay = today.getDate();
-      let todayDate = [];
-      todayDate.push(todayYear);
-      todayDate.push(todayMonth);
-      todayDate.push(todayDay);
+      let year = today.getFullYear();
+      let month = today.getMonth();
+      let day = today.getDate();
+      let todayDate = [year, month, day];
       return todayDate;
     }
     console.log(`The current date is ${getToday()}`);
@@ -37,19 +34,18 @@
       let month = getToday()[1] - getBirthDate()[1];
       let day = getToday()[2] - getBirthDate()[2];
       let age = [year, month, day];
-      // Adjusts the month if (day < 1) and the year if (month < 1)
+      // Adjusts the month if (day < 1) and adjusts the year if (month < 1)
       for (i = 2; i >= 0; i--) {
         if (age[i] < 1) {
           age[i - 1] = age[i - 1] - 1;
         }
       }
       // fun fact: year =/= age[0]
-      console.log(`age = ${age}`);
-      console.log(`year = ${year}`);
-      console.log(`age[0] = ${age[0]}`);
+      console.log(`- age = ${age}`);
+      console.log(`- year = ${year}`);
+      console.log(`- age[0] = ${age[0]}`);
       return age[0];
     }
-    console.log(`You are ${calcAge()} years old`);
     alert(`You are ${calcAge()} years old`);
   });
 })();
