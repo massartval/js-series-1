@@ -32,10 +32,12 @@
     /**
      * Returns the number of complete years since your birth (aka your age)
      */ function calcAge() {
+      // Substract birth date from current date
       let year = getToday()[0] - getBirthDate()[0];
       let month = getToday()[1] - getBirthDate()[1];
       let day = getToday()[2] - getBirthDate()[2];
       let age = [year, month, day];
+      // Adjusts the month if (day < 1) and the year if (month < 1)
       for (i = 2; i >= 0; i--) {
         if (age[i] < 1) {
           age[i - 1] = age[i - 1] - 1;
