@@ -5,7 +5,6 @@
 
   // your code here
 
-  // Create a date object
   let currentTime = new Date();
 
   /**
