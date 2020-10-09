@@ -31,8 +31,7 @@
 
   /**
    * Displays the date in "target"
-   */
-  function changeDate() {
+   */ function changeDate() {
     document.getElementById("target").innerHTML = `${tellDayOfWeekInEnglish()} ${dayOfMonth} ${tellMonthInEnglish()} ${year}, ${hours}h${minutes}`;
   }
   changeDate();
