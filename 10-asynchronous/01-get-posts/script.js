@@ -2,14 +2,15 @@
 
 (() => {
   // your code here
+  let articlesArray = ["articleOne", "articleTwo"];
   document.getElementById("run").addEventListener("click", () => {
     function getPosts(callback) {
       alert(`Open the console to see callback`);
       callback();
     }
 
-    getPosts(function () {
-      console.log(getPosts());
+    getPosts(function (null, ariclesArray) {
+      return articlesArray;
     });
   });
 })();
