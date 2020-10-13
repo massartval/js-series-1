@@ -9,3 +9,11 @@ https://dreaminginjavascript.wordpress.com/2008/06/27/how-weird-are-javascript-a
 https://stackoverflow.com/questions/1168807/how-can-i-add-a-key-value-pair-to-a-javascript-object
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
+
+5.11 : forEach WTF
+How come that this works:
+fruits.forEach(myFunction);
+But not this:
+fruits.forEach(myFunction());
+And neither this:
+fruits.forEach(myFunction(item));
